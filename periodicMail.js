@@ -2,6 +2,8 @@ const nodemailer = require("nodemailer");
 const cron = require('node-cron');
 const app = require("./src/app");
 
+require("dotenv").config();
+
 const periodicPaymentsService = app.service("/api/periodicpayments")
 const householdsService = app.service("/api/households")
 const householdmembersService = app.service("/api/householdmembers")
@@ -11,8 +13,8 @@ const usersService = app.service("/users")
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: app.get("auth_user"),
-        pass: app.get("auth_pass")
+        user: process.env.AUTH_USER,
+        pass: process.env.AUTH_PASS
     }
 });
 

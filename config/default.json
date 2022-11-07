@@ -25,7 +25,6 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://localhost:27017/expense_management_system",
-  "auth_user": "sidheshp@valueaddsofttech.com",
-  "auth_pass": "Ihave#RTX3090"
+  "mongodb": "mongodb+srv://Everlasting:iamsidheshparab34@movie-rental.uyweh00.mongodb.net/exmsdb?retryWrites=true&w=majority",
+  
 }
