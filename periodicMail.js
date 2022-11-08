@@ -110,11 +110,9 @@ async function getData()
 
 }
 
-cron.schedule('06 19 * * *', () =>
+cron.schedule('15 30 * * *', () =>
 {
-
     getData()
-
 });
 // cron.schedule('*/5 * * * * *', () =>
 // {
