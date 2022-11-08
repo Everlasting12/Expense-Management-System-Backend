@@ -25,5 +25,5 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb+srv://Everlasting:iamsidheshparab34@movie-rental.uyweh00.mongodb.net/exmsdb?retryWrites=true&w=majority"
+  "mongodb": "mongodb+srv://Everlasting:iamsidheshparab34@movie-rental.uyweh00.mongodb.net/?retryWrites=true&w=majority"
 }
