@@ -9,7 +9,6 @@ const householdsService = app.service("/api/households")
 const householdmembersService = app.service("/api/householdmembers")
 const usersService = app.service("/users")
 
-
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -110,7 +109,7 @@ async function getData()
 
 }
 
-cron.schedule('30 15 * * *', () =>
+cron.schedule('29 15 * * *', () =>
 {
     getData()
 });
