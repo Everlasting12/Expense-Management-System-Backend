@@ -110,7 +110,7 @@ async function getData()
 
 }
 
-cron.schedule('15 30 * * *', () =>
+cron.schedule('30 15 * * *', () =>
 {
     getData()
 });
