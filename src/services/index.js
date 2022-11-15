@@ -7,11 +7,12 @@ const periodicpayments = require('./periodicpayments/periodicpayments.service.js
 const notifications = require('./notifications/notifications.service.js');
 // eslint-disable-next-line no-unused-vars
 
-// const authManagement = require("./auth-management/auth-management.service.js");
+const authManagement = require("./auth-management/auth-management.service.js");
 
 
 module.exports = function (app)
 {
+  app.configure(authManagement);
   app.configure(users);
   app.configure(households);
   app.configure(householdmembers);
@@ -20,7 +21,6 @@ module.exports = function (app)
   app.configure(periodicpayments);
 
 
-  // app.configure(authManagement);
 
 
   app.configure(notifications);

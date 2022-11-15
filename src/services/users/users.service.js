@@ -2,7 +2,7 @@
 const { Users } = require('./users.class');
 const createModel = require('../../models/users.model');
 const hooks = require('./users.hooks');
-const customHooks = require('./fp.hooks');
+// const customHooks = require('./fp.hooks');
 
 
 const multer = require("multer");
@@ -33,15 +33,15 @@ module.exports = function (app)
   }, new Users(options, app));
 
   //custom created service by Sidhesh Parab
-  app.use('/forgetpassword', new Users(options, app));
+  // app.use('/forgetpassword', new Users(options, app));
 
   // Get our initialized service so that we can register hooks
   const service = app.service('users');
 
   //custom created service by Sidhesh Parab
-  const forgetpassword = app.service('forgetpassword');
+  // const forgetpassword = app.service('forgetpassword');
 
   service.hooks(hooks);
-  forgetpassword.hooks(customHooks);
+  // forgetpassword.hooks(customHooks);
 
 };

@@ -12,7 +12,7 @@ const AdminDetails = {
     password: "123456789",
     role: "admin",
     updatedBy: null,
-
+    isVerified: true
 }
 
 

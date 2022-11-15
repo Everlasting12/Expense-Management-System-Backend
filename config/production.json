@@ -25,5 +25,6 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb+srv://Everlasting:iamsidheshparab34@movie-rental.uyweh00.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb": "mongodb+srv://Everlasting:iamsidheshparab34@movie-rental.uyweh00.mongodb.net/?retryWrites=true&w=majority",
+  "react-frontend":"https://blooming-brushlands-42033.herokuapp.com/exms/resetpassword/"
 }

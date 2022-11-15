@@ -67,10 +67,10 @@ module.exports = function (app)
       type: Date,
       default: Date.now(),
     },
-    resetLink: {
-      type: String,
-      default: ''
-    },
+    // resetLink: {
+    //   type: String,
+    //   default: ''
+    // },
     profileImage: {
       imageBuffer: {
         type: Buffer,
@@ -78,7 +78,13 @@ module.exports = function (app)
       },
       fileName: { type: String },
       type: { type: String },
-    }
+    },
+    isVerified: { type: Boolean },
+    verifyToken: { type: String },
+    verifyExpires: { type: Date },
+    resetToken: { type: String },
+    resetShortToken: { type: String },
+    resetExpires: { type: Date }
 
   }, {
     timestamps: true

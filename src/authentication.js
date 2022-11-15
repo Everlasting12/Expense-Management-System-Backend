@@ -39,6 +39,18 @@ module.exports = app =>
   authentication.register('jwt', new JWTStrategy());
   authentication.register('local', new LocalStrategy());
 
-  app.use('/authentication', authentication);
+  app.use('/authentication',
+    async (req, res, next) =>
+    {
+
+      const userService = await app.service("/users");
+      const user = await userService.find({ query: { email: req.body.email } })
+      if (user.data[0].isVerified === false)
+      {
+        return res.status(401).send({ message: "Please verify your account" })
+      }
+      next();
+    },
+    authentication);
   app.configure(expressOauth());
 };
